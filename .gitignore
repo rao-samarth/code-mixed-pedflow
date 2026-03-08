@@ -1,4 +1,7 @@
 venv/
 lesson_audio*
 raw_transcript.txt
-transcript.txt
+*transcript.txt
+.env
+*.py
+venv2
