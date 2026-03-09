@@ -5,3 +5,4 @@ raw_transcript.txt
 .env
 *.py
 venv2
+extracted_concepts.json

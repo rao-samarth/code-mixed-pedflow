@@ -1,0 +1,58 @@
+{
+    "concepts": [
+        {
+            "topic_name": "Programming and Coding",
+            "explanation": "The process of communicating with a computer using a high-level programming language. The written code is converted into machine code (binary 0s and 1s) using a compiler or interpreter so the computer can understand and execute the instructions.",
+            "prerequisites": []
+        },
+        {
+            "topic_name": "Interpreted Language",
+            "explanation": "A programming language, such as Python, where the code is translated and executed line by line. This approach makes debugging easier by identifying errors on specific lines immediately, although it results in slower execution compared to compiled languages.",
+            "prerequisites": [
+                "Programming and Coding"
+            ]
+        },
+        {
+            "topic_name": "Compiled Language",
+            "explanation": "A programming language, such as C or C++, where the entire source code is translated into machine code all at once before execution. This generates an executable file and generally results in faster execution times.",
+            "prerequisites": [
+                "Programming and Coding"
+            ]
+        },
+        {
+            "topic_name": "Dynamically Typed Language",
+            "explanation": "A language feature where variable data types do not need to be explicitly declared. The type is automatically assigned at runtime and can be changed dynamically during execution. Python follows this approach.",
+            "prerequisites": [
+                "Programming and Coding"
+            ]
+        },
+        {
+            "topic_name": "Statically Typed Language",
+            "explanation": "A language feature where the data type of a variable must be explicitly declared before use and cannot be changed to a different type later. C and C++ follow this approach.",
+            "prerequisites": [
+                "Programming and Coding"
+            ]
+        },
+        {
+            "topic_name": "Object-Oriented Programming (OOP)",
+            "explanation": "A programming paradigm that maps code to real-world entities to improve modularity. It uses classes as blueprints or templates, and objects as the specific instances or products created from those templates.",
+            "prerequisites": [
+                "Programming and Coding"
+            ]
+        },
+        {
+            "topic_name": "Standard Library",
+            "explanation": "A collection of built-in functions and modules provided by the language. It allows developers to perform common tasks, such as mathematical operations or generating random numbers, without writing the underlying code from scratch.",
+            "prerequisites": [
+                "Programming and Coding"
+            ]
+        },
+        {
+            "topic_name": "The print() Function",
+            "explanation": "A built-in Python function used to display output to the console. It is executed by placing the desired text or variable inside the parentheses, which then outputs the evaluated result to the screen.",
+            "prerequisites": [
+                "Programming and Coding"
+            ]
+        }
+    ]
+}
