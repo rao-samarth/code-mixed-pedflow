@@ -6,3 +6,4 @@ raw_transcript.txt
 *.py
 venv2
 extracted_concepts.json
+*on.png
