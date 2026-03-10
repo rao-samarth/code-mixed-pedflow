@@ -1,39 +1,71 @@
 {
+    "terminology_glossary": [
+        {
+            "code_mixed_phrase": "live event alli line by line",
+            "standard_academic_term": "Interpreted Language",
+            "contextual_meaning": "Refers to an execution model where code is translated and executed line-by-line, analogous to a live human translator at a conference."
+        },
+        {
+            "code_mixed_phrase": "recorded event ide... total event na convert m\u0101\u1e0di",
+            "standard_academic_term": "Compiled Language",
+            "contextual_meaning": "Refers to an execution model where the entire source code is translated into machine code at once before execution, analogous to translating a pre-recorded video."
+        },
+        {
+            "code_mixed_phrase": "uniform b\u0113ku... clothes type y\u0101v\u0101gl\u016b static \u0101girutte",
+            "standard_academic_term": "Statically Typed",
+            "contextual_meaning": "A programming language rule where variable data types must be explicitly declared and cannot change, compared to a strict school uniform policy."
+        },
+        {
+            "code_mixed_phrase": "no uniform... y\u0101vatt\u0101dru b\u0113k\u0101d\u0101g change m\u0101\u1e0db\u014ddu",
+            "standard_academic_term": "Dynamically Typed",
+            "contextual_meaning": "A programming language rule where variables do not require explicit type declaration and can change types during runtime, compared to wearing casual clothes."
+        },
+        {
+            "code_mixed_phrase": "template na n\u0101vu create m\u0101\u1e0dk\u014dt\u012bvi... car blueprint",
+            "standard_academic_term": "Class",
+            "contextual_meaning": "A blueprint or template used in Object-Oriented Programming to define the structure and behavior of objects."
+        },
+        {
+            "code_mixed_phrase": "\u0101 template i\u1e41da m\u0101\u1e0d\u014d y\u0101vud\u0113 product... Tata, BMW, Benz",
+            "standard_academic_term": "Object",
+            "contextual_meaning": "An instance created from a class blueprint in Object-Oriented Programming, compared to specific car brands built from a general car blueprint."
+        }
+    ],
     "concepts": [
         {
-            "prerequisite_state": "Absolute Beginner",
-            "topic_name": "Concept of Coding",
-            "explanation": "Using a programming language to communicate instructions to a computer, which are then converted into binary machine code.",
-            "target_state": "Understands Programming Purpose"
+            "prerequisite_state": "Basic Communication",
+            "topic_name": "Programming Language Concept",
+            "explanation": "Understanding that just as humans use languages like English to communicate with each other, developers use programming languages to give instructions to computers.",
+            "target_state": "Knows Programming Languages"
         },
         {
-            "prerequisite_state": "Understands Programming Purpose",
-            "topic_name": "High-Level Languages",
-            "explanation": "Writing code in human-readable, English-like syntax rather than complex machine-level binary instructions.",
-            "target_state": "Knows Language Levels"
+            "prerequisite_state": "Knows Programming Languages",
+            "topic_name": "Machine Code Conversion",
+            "explanation": "Computers only understand binary (0s and 1s). High-level programming languages must be converted into this machine code using a compiler or interpreter.",
+            "target_state": "Knows Machine Code"
         },
         {
-            "prerequisite_state": "Knows Language Levels",
-            "topic_name": "Interpreted Execution Model",
-            "explanation": "Translating and executing code line-by-line at runtime, making debugging easier but execution slightly slower compared to compiled languages.",
-            "target_state": "Understands Execution Models"
+            "prerequisite_state": "Knows Machine Code",
+            "topic_name": "Interpreters and Compilers",
+            "explanation": "Interpreters translate and execute code line-by-line (slower but easier to debug), while compilers translate the entire program at once into an executable file.",
+            "target_state": "Knows Execution Models"
         },
         {
-            "prerequisite_state": "Understands Execution Models",
+            "prerequisite_state": "Knows Execution Models",
             "topic_name": "Dynamic Typing",
-            "explanation": "Assigning data to variables without explicitly declaring their data type, allowing the type to change dynamically during runtime.",
+            "explanation": "In Python, variables do not need a predefined data type (like int or string). The type is assigned automatically at runtime and can be changed dynamically.",
             "target_state": "Knows Dynamic Typing"
         },
         {
             "prerequisite_state": "Knows Dynamic Typing",
             "topic_name": "Object-Oriented Programming",
-            "explanation": "Structuring code using classes as templates or blueprints to create specific objects, improving modularity and real-world mapping.",
-            "target_state": "Understands OOP Basics"
+            "explanation": "A programming paradigm based on creating templates (classes) to generate specific instances (objects), which improves code modularity and reusability.",
+            "target_state": "Knows OOP Basics"
         },
         {
-            "prerequisite_state": "Understands OOP Basics",
-            "topic_name": "Basic Print Function",
-            "explanation": "Using the built-in print function within an IDE to output text strings to the console.",
+            "prerequisite_state": "Knows OOP Basics",
+            "topic_name": "First Python Program",
+            "explanation": "Using an Integrated Development Environment (IDE) like VS Code to write and execute basic code, such as using the print() function to display text.",
             "target_state": "Can Write Code"
         }
     ]
