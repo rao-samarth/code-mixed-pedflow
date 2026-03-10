@@ -22,6 +22,12 @@ These are the videos I selected. The pipeline can be run on any one of these, or
 
 ## Architectural Choices & Chosen Output Structure
 
+We are tasked with:
+1. Extracting core concepts
+2. Linguistic Standardisation
+3. Mapping Prerequisites
+4. Representing output data in a machine-readable format
+
 ### What is a Core Concept?
 
 To me, a topic lies in a very specific zone. It should not be too broad, nor should it be too narrow.  
@@ -60,6 +66,8 @@ The decision to model the dependencies as an Epistemic State Machine rather than
 **Reference:** Dowling et al.'s *Automata for the Assessment of Knowledge*. IEEE Transactions on Knowledge and Data Engineering.
 
 As proven in this research, an individual's learning pathway is best modeled mathematically as a finite state automaton. By forcing the LLM to extract data into strict `prerequisite_state` and `target_state` keys, the output isn't just a static map, it is an executable rules engine. This approach mathematically bounds the LLM to the pedagogical flow of the transcript, preventing it from hallucinating "global knowledge" outside of the machine's defined transition pathways.
+
+![Alt text](example/epistemic_automaton_example.png)
 
 ### Prerequisite Knowledge
 
@@ -109,4 +117,6 @@ This ensures that the informal pedagogical intent is losslessly preserved and tr
 
 ## Setup Instructions
 
-clone, install reqs in your environment, `Run All` in [code.ipynb](code.ipynb)
+1. Clone this repository
+2. In a virtual environment, run `pip install -r requirements.txt`
+3. Run the code in the Python notebook
