@@ -13,12 +13,12 @@ To build and test this pipeline, I utilized educational transcripts featuring he
 
 These are the videos I selected. The pipeline can be run on any one of these, or **any other video on YouTube** by proceeding as prompted by the [code.ipynb](code.ipynb) file.
 
-- `0`: You will be prompted to enter your own video URL.
-- `1`: [Python in Kannada - Introduction to Coding and Python | Full Course for Beginners - #1](https://www.youtube.com/watch?v=8c74mXV2lJ0&list=PLlGueSbLhZoBRnTsGiDJeTXuQCALOTN07) | KANNADA+ENGLISH
-- `2`: [Chapter1- The Living World ಕನ್ನಡದಲ್ಲಿ | biology | NCERT](https://www.youtube.com/watch?v=lse_2joLgLo) | KANNADA+ENGLISH
-- `3`: [Embryo Sac Development|Sexual Reproduction in flowering plants in kannada| BIOLOGY|NEET](https://www.youtube.com/watch?v=EibWp3ssXi4) | KANNADA+ENGLISH
-- `4`: [Banking of Road with friction for JEE & NEET | Class 11 Physics in Minutes](https://www.youtube.com/watch?v=_qrM61-9td8) | HINDI+ENGLISH
-- `5`: [Extension of the British rule. Class 10th. History. Kannada explanation. Part 1.](https://www.youtube.com/watch?v=h_cCv4W3IBI) | KANNADA+ENGLISH
+The videos we selected are as follows:
+1. [Python in Kannada - Introduction to Coding and Python | Full Course for Beginners - #1](https://www.youtube.com/watch?v=8c74mXV2lJ0&list=PLlGueSbLhZoBRnTsGiDJeTXuQCALOTN07) | KANNADA+ENGLISH
+2. [Chapter1- The Living World ಕನ್ನಡದಲ್ಲಿ | biology | NCERT](https://www.youtube.com/watch?v=lse_2joLgLo) | KANNADA+ENGLISH
+3. [Embryo Sac Development|Sexual Reproduction in flowering plants in kannada| BIOLOGY|NEET](https://www.youtube.com/watch?v=EibWp3ssXi4) | KANNADA+ENGLISH
+4. [Banking of Road with friction for JEE & NEET | Class 11 Physics in Minutes](https://www.youtube.com/watch?v=_qrM61-9td8) | HINDI+ENGLISH
+5. [Extension of the British rule. Class 10th. History. Kannada explanation. Part 1.](https://www.youtube.com/watch?v=h_cCv4W3IBI) | KANNADA+ENGLISH
 
 ## Architectural Choices & Chosen Output Structure
 
@@ -105,13 +105,15 @@ By forcing the model into this specific JSON schema, I transition the unstructur
 
 ### Linguistic Standardization
 
-A standard approach to code-mixed NLP is to simply ask an LLM to "translate the text to formal English." I realized this is a flawed methodology. It performs invisible translation, making it impossible to audit how the pipeline handles heavy code-mixing, and it frequently destroys pedagogical analogies (e.g., translating a cultural analogy about a "dabba" literally as a "box", rather than mapping it to "memory allocation").
+A common way to handle code-mixed text is to just tell an LLM to "translate everything to English." I think this is a flawed approach.
 
-To achieve true Code-Mixed Robustness, I treated this as an Ontology Alignment problem.
+First, it translates invisibly, so we have no way to audit how it handled the slang. Second, it frequently destroys teaching analogies. For example, if a teacher compares a variable to an empty "dabba", a basic translation just outputs the word "box", completely losing the actual computer science concept of "memory allocation".
 
-Rather than a black-box translation, my architecture features Auditable Semantic Glossing. Using Pydantic, I force the LLM to explicitly extract a terminology_glossary alongside the core concepts. The pipeline isolates every colloquial Indic term, domain-specific slang, or code-mixed analogy, and explicitly maps it to its rigorous English academic equivalent.
+To solve this, I treated this as an Ontology Alignment problem. While that sounds like a heavy term, it simply means taking concepts from one knowledge system (the teacher's informal, cultural slang) and mapping them directly to another (formal academic English).
 
-This ensures that the informal pedagogical intent is losslessly preserved and translated into a standardized, machine-readable academic ontology.
+Instead of trusting the LLM to do a "black-box" translation in the background, my pipeline features Auditable Semantic Glossing. Simply put: I force the model to explicitly build a dictionary.
+
+Using Pydantic, I require the LLM to extract a terminology_glossary alongside the core concepts. The pipeline isolates every colloquial Indic term, domain-specific slang, or analogy, and explicitly maps it to its rigorous English academic equivalent. This ensures that the informal pedagogical intent is preserved, and anyone evaluating the output can see exactly how the code-mixing was handled
 
 ---
 
@@ -119,4 +121,5 @@ This ensures that the informal pedagogical intent is losslessly preserved and tr
 
 1. Clone this repository
 2. In a virtual environment, run `pip install -r requirements.txt`
-3. Run the code in the Python notebook
+3. Run `sudo apt install graphviz ffmpeg` (On Debian Linux)
+4. Click Run All in [code.ipynb](code.ipynb) and proceed as prompted.

@@ -1,72 +1,72 @@
 {
     "terminology_glossary": [
         {
-            "code_mixed_phrase": "live event alli line by line",
-            "standard_academic_term": "Interpreted Language",
-            "contextual_meaning": "Refers to an execution model where code is translated and executed line-by-line, analogous to a live human translator at a conference."
+            "code_mixed_phrase": "machine ge artha āgō rīti oṁdu language",
+            "standard_academic_term": "Machine Language",
+            "contextual_meaning": "The lowest-level programming language consisting of binary digits (0s and 1s) that a computer's central processing unit can execute directly."
         },
         {
-            "code_mixed_phrase": "recorded event ide... total event na convert m\u0101\u1e0di",
-            "standard_academic_term": "Compiled Language",
-            "contextual_meaning": "Refers to an execution model where the entire source code is translated into machine code at once before execution, analogous to translating a pre-recorded video."
+            "code_mixed_phrase": "live alli translate āgi avrige hōgtā ide",
+            "standard_academic_term": "Interpreted Execution",
+            "contextual_meaning": "The process where source code is translated and executed line-by-line at runtime, analogous to a live language translator at a conference."
         },
         {
-            "code_mixed_phrase": "uniform b\u0113ku... clothes type y\u0101v\u0101gl\u016b static \u0101girutte",
-            "standard_academic_term": "Statically Typed",
-            "contextual_meaning": "A programming language rule where variable data types must be explicitly declared and cannot change, compared to a strict school uniform policy."
+            "code_mixed_phrase": "total event na like convert māḍi",
+            "standard_academic_term": "Compiled Execution",
+            "contextual_meaning": "The process where the entire source code is translated into machine code ahead of time before execution, analogous to translating a pre-recorded event."
         },
         {
-            "code_mixed_phrase": "no uniform... y\u0101vatt\u0101dru b\u0113k\u0101d\u0101g change m\u0101\u1e0db\u014ddu",
-            "standard_academic_term": "Dynamically Typed",
-            "contextual_meaning": "A programming language rule where variables do not require explicit type declaration and can change types during runtime, compared to wearing casual clothes."
+            "code_mixed_phrase": "cloth type yāvāglū same irutte static irutte",
+            "standard_academic_term": "Static Typing",
+            "contextual_meaning": "A programming language feature where variable types are explicitly declared and cannot change, compared to a strict college uniform policy."
         },
         {
-            "code_mixed_phrase": "template na n\u0101vu create m\u0101\u1e0dk\u014dt\u012bvi... car blueprint",
-            "standard_academic_term": "Class",
-            "contextual_meaning": "A blueprint or template used in Object-Oriented Programming to define the structure and behavior of objects."
+            "code_mixed_phrase": "cloth type illi change āgtā ide",
+            "standard_academic_term": "Dynamic Typing",
+            "contextual_meaning": "A programming language feature where variables do not require explicit type declaration and can change types at runtime, compared to a flexible dress code."
         },
         {
-            "code_mixed_phrase": "\u0101 template i\u1e41da m\u0101\u1e0d\u014d y\u0101vud\u0113 product... Tata, BMW, Benz",
-            "standard_academic_term": "Object",
-            "contextual_meaning": "An instance created from a class blueprint in Object-Oriented Programming, compared to specific car brands built from a general car blueprint."
+            "code_mixed_phrase": "template na nāvu create māḍkōtīvi... product na nāvu object aṁta hēḷtīvi",
+            "standard_academic_term": "Class and Object Instantiation",
+            "contextual_meaning": "The core concept of Object-Oriented Programming where a 'class' acts as a blueprint (template) to create specific instances called 'objects' (products)."
         }
     ],
     "concepts": [
         {
-            "prerequisite_state": "Basic Communication",
-            "topic_name": "Programming Language Concept",
-            "explanation": "Understanding that just as humans use languages like English to communicate with each other, developers use programming languages to give instructions to computers.",
-            "target_state": "Knows Programming Languages"
+            "prerequisite_state": "AbsoluteBeginner",
+            "topic_name": "Introduction to Programming",
+            "explanation": "Understanding that programming is a medium of communication used to give instructions to a computer, rather than just arbitrary hacking symbols.",
+            "target_state": "ProgrammingBasics"
         },
         {
-            "prerequisite_state": "Knows Programming Languages",
-            "topic_name": "Machine Code Conversion",
-            "explanation": "Computers only understand binary (0s and 1s). High-level programming languages must be converted into this machine code using a compiler or interpreter.",
-            "target_state": "Knows Machine Code"
+            "prerequisite_state": "ProgrammingBasics",
+            "topic_name": "Machine Code vs High-Level Language",
+            "explanation": "Computers only understand binary (0s and 1s). High-level languages like Python use English-like syntax to make it easier for humans to write code, which is later converted to machine code.",
+            "target_state": "LanguageLevels"
         },
         {
-            "prerequisite_state": "Knows Machine Code",
-            "topic_name": "Interpreters and Compilers",
-            "explanation": "Interpreters translate and execute code line-by-line (slower but easier to debug), while compilers translate the entire program at once into an executable file.",
-            "target_state": "Knows Execution Models"
+            "prerequisite_state": "LanguageLevels",
+            "topic_name": "Interpreted vs Compiled Execution",
+            "explanation": "Interpreters translate and execute code line-by-line (making debugging easier but execution slower), whereas compilers translate the entire code into a machine code file at once.",
+            "target_state": "ExecutionModels"
         },
         {
-            "prerequisite_state": "Knows Execution Models",
+            "prerequisite_state": "ExecutionModels",
             "topic_name": "Dynamic Typing",
-            "explanation": "In Python, variables do not need a predefined data type (like int or string). The type is assigned automatically at runtime and can be changed dynamically.",
-            "target_state": "Knows Dynamic Typing"
+            "explanation": "In Python, data types are assigned automatically at runtime and can be changed dynamically, unlike statically typed languages (like C/C++) which require strict, unchangeable type declarations.",
+            "target_state": "DynamicTyping"
         },
         {
-            "prerequisite_state": "Knows Dynamic Typing",
-            "topic_name": "Object-Oriented Programming",
-            "explanation": "A programming paradigm based on creating templates (classes) to generate specific instances (objects), which improves code modularity and reusability.",
-            "target_state": "Knows OOP Basics"
+            "prerequisite_state": "DynamicTyping",
+            "topic_name": "Object-Oriented Programming (OOP) Basics",
+            "explanation": "A programming paradigm that organizes code using templates (classes) to create specific instances (objects), improving modularity and making large-scale development easier.",
+            "target_state": "OopBasics"
         },
         {
-            "prerequisite_state": "Knows OOP Basics",
+            "prerequisite_state": "OopBasics",
             "topic_name": "First Python Program",
-            "explanation": "Using an Integrated Development Environment (IDE) like VS Code to write and execute basic code, such as using the print() function to display text.",
-            "target_state": "Can Write Code"
+            "explanation": "Setting up an Integrated Development Environment (IDE) like VS Code and using the built-in `print()` function to output text to the console.",
+            "target_state": "BasicSyntax"
         }
     ]
 }
