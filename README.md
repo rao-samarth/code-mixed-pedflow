@@ -56,17 +56,13 @@ I will do this through Pydantic.
 
 ### Epistemic State Machine
 
-Here, I wanted to model the *learner* on the basis of data, not the data itself. What do I mean by this?
+Here, I wanted to model the *learner* on the basis of data. I do not want to model the data itself. What do I mean by this?
 
-Instead of outputting a simple adjacency list or a standard JSON array that just maps static data points, I will model the dependencies as an **Epistemic State Machine (automaton)**.  
+Instead of outputting a basic adjacency list or a standard JSON array that maps static data points, the dependencies are modeled as an Epistemic State Machine (automaton).
 
-By defining my Pydantic schema to output *States* and *Transitions*, I force the LLM to do more than just extract, it acts as a rules engine generator. By analyzing the sequential logic of the transliterated text, the model maps the exact knowledge state the teacher relies on before executing the next pedagogical transition.
+The Pydantic schema is designed to output states and transitions, which forcing the LLM to do more than extract information. We can say that it generates a structured set of rules. By analyzing the sequence of the transliterated text, the model identifies the knowledge state a teacher assumes before moving to the next instructional step. An example can be seen in the image below.. Basically, each transition reflects movement from a prerequisite_state to a target_state.
 
-The decision to model the dependencies as an Epistemic State Machine rather than a standard JSON array is grounded in **Knowledge Space Theory (KST)**. 
-
-**Reference:** Dowling et al.'s *Automata for the Assessment of Knowledge*. IEEE Transactions on Knowledge and Data Engineering.
-
-As proven in this research, an individual's learning pathway is best modeled mathematically as a finite state automaton. By forcing the LLM to extract data into strict `prerequisite_state` and `target_state` keys, the output isn't just a static map, it is an executable rules engine. This approach mathematically bounds the LLM to the pedagogical flow of the transcript, preventing it from hallucinating "global knowledge" outside of the machine's defined transition pathways.
+Because the model must produce these explicit state transitions, the result behaves like a simple rules engine. The structure constrains the LLM to the instructional flow present in the transcript and limits the chance of introducing knowledge that is not supported by the sequence of teaching steps.
 
 ![Alt text](example/epistemic_automaton_example.png)
 
@@ -74,8 +70,7 @@ As proven in this research, an individual's learning pathway is best modeled mat
 
 I read that a common failure point in educational NLP is *"global knowledge hallucination"*, where an LLM pulls in outside mathematical dependencies that were never discussed in the audio. [source](https://arxiv.org/pdf/2602.11181). To solve this, the pipeline is strictly bound to the pedagogical flow of the transcript.
 
-- The system does not ask the LLM: *"What are the prerequisites for multiplying by 5?"*
-- The system asks: *"Within the logical flow of this specific lesson, what prior state did the teacher establish before executing this new rule?"*
+Instead of asking, *"What are the prerequisites for multiplying by 5?"*, we prompt it with *"Within the logical flow of this specific lesson, what prior state did the teacher establish before executing this new rule?"*
 
 This ensures the generated state machine is a mathematically accurate representation of the teacher's lesson plan, completely immune to external context hallucination.
 
