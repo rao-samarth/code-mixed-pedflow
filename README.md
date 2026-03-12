@@ -5,6 +5,7 @@ Here, I attempt to build a pipeline which takes a code-mixed (Indic-English) You
 This project also notes linguistic standardisation, explicitly mapping colloquial Indic terms and code-mixed analogies back to their formal academic English equivalents
 All the code can be found in [code.ipynb](code.ipynb).
 
+Video Link: [https://www.youtube.com/watch?v=zZTzmOQytG0](https://www.youtube.com/watch?v=zZTzmOQytG0)
 
 ---
 
